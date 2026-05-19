@@ -1,7 +1,7 @@
 [project]
-name = "panopticon"
+name = "SJZ-dunbingmiaozhun"
 version = "0.1.0"
-description = "GPU-accelerated AI window observer using YOLOv8"
+description = "GPU-accelerated AI aiming detection system using CNN"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{ name = "xransum" }]
@@ -10,15 +10,14 @@ license = { text = "MIT" }
 dependencies = [
     "PyQt6>=6.6.0",
     "mss>=9.0.1",
-    "ultralytics>=8.0.0",
     "numpy>=1.24.0",
     "opencv-python>=4.9.0",
     "Pillow>=10.0.0",
+    "tensorflow>=2.15.0",
     # Platform-specific window enumeration
     "python-xlib>=0.33; sys_platform == 'linux'",
     "pywin32>=306; sys_platform == 'win32'",
-    "pyobjc-framework-Quartz>=10.0; sys_platform == 'darwin'",
-]
+    "pyobjc-framework-Quartz>=10.0; sys_platform ==
 
 [project.scripts]
 panopticon = "panopticon.app:run"

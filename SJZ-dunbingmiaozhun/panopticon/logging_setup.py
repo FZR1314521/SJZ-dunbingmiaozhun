@@ -60,7 +60,7 @@ def setup_logging() -> Path:
     root.addHandler(sh)
 
     # Silence chatty third-party loggers that flood at DEBUG level
-    for noisy in ("ultralytics", "torch", "PIL"):
+    for noisy in ("torch", "PIL", "tensorflow"):
         logging.getLogger(noisy).setLevel(logging.WARNING)
 
     logging.getLogger(__name__).debug("Logging initialised — writing to %s", log_file)
